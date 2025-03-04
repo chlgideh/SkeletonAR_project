@@ -1,0 +1,304 @@
+* Default Transformer
+
+(.venv) root@DESKTOP-0NK1C3M:/mnt/d/ntu_rgb_skeleton_data# /mnt/d/ntu_rgb_skeleton_data/.venv/bin/python /mnt/d/ntu_rgb_skeleton_data/default_model_alldata.py
+2025-03-04 06:02:38.565803: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1741035759.546273   27499 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1741035759.825510   27499 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-03-04 06:02:45.941512: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1741036286.645172   27499 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 4699 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1060 6GB, pci bus id: 0000:06:00.0, compute capability: 6.1
+2025-03-04 06:12:21.875759: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 635925000 exceeds 10% of free system memory.
+2025-03-04 06:12:23.459585: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 635925000 exceeds 10% of free system memory.
+Epoch 1/10
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1741036362.196049   28373 service.cc:148] XLA service 0x7f68b0009000 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1741036362.199713   28373 service.cc:156]   StreamExecutor device (0): NVIDIA GeForce GTX 1060 6GB, Compute Capability 6.1
+2025-03-04 06:12:44.786814: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var MLIR_CRASH_REPRODUCER_DIRECTORY to enable.
+I0000 00:00:1741036367.754228   28373 cuda_dnn.cc:529] Loaded cuDNN version 90600
+2025-03-04 06:12:56.995806: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+I0000 00:00:1741036377.027713   28373 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step - accuracy: 0.1006 - loss: 3.63632025-03-04 06:13:23.326890: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 68 bytes spill stores, 68 bytes spill loads
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step - accuracy: 0.1007 - loss: 3.63522025-03-04 06:13:23.648639: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 158985000 exceeds 10% of free system memory.
+2025-03-04 06:13:23.754637: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 158985000 exceeds 10% of free system memory.
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 68s 26ms/step - accuracy: 0.1008 - loss: 3.6348 - val_accuracy: 0.2777 - val_loss: 2.6353
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 24s 18ms/step - accuracy: 0.2678 - loss: 2.6367 - val_accuracy: 0.2738 - val_loss: 2.6224
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.2958 - loss: 2.5237 - val_accuracy: 0.3180 - val_loss: 2.4563
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.2934 - loss: 2.5345 - val_accuracy: 0.3054 - val_loss: 2.4674
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3218 - loss: 2.4046 - val_accuracy: 0.3022 - val_loss: 2.4632
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 24s 18ms/step - accuracy: 0.3283 - loss: 2.3912 - val_accuracy: 0.3545 - val_loss: 2.2864
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3407 - loss: 2.3255 - val_accuracy: 0.3438 - val_loss: 2.3189
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3440 - loss: 2.3213 - val_accuracy: 0.3356 - val_loss: 2.3533
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3447 - loss: 2.3300 - val_accuracy: 0.2784 - val_loss: 2.5773
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 24s 18ms/step - accuracy: 0.3262 - loss: 2.3856 - val_accuracy: 0.3397 - val_loss: 2.3462
+2025-03-04 06:17:30.973712: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 635925000 exceeds 10% of free system memory.
+Epoch 1/10
+2025-03-04 06:17:44.261265: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+1323/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step - accuracy: 0.3458 - loss: 2.30652025-03-04 06:18:10.836838: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 68 bytes spill stores, 68 bytes spill loads
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 46s 26ms/step - accuracy: 0.3458 - loss: 2.3064 - val_accuracy: 0.3596 - val_loss: 2.2474
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.3363 - loss: 2.3304 - val_accuracy: 0.3626 - val_loss: 2.2362
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.3719 - loss: 2.1745 - val_accuracy: 0.3751 - val_loss: 2.1837
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3860 - loss: 2.1326 - val_accuracy: 0.3775 - val_loss: 2.1501
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3848 - loss: 2.1437 - val_accuracy: 0.3524 - val_loss: 2.2755
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.3675 - loss: 2.2112 - val_accuracy: 0.3718 - val_loss: 2.2165
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.3904 - loss: 2.1262 - val_accuracy: 0.4000 - val_loss: 2.0771
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4003 - loss: 2.0696 - val_accuracy: 0.4057 - val_loss: 2.0727
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4042 - loss: 2.0645 - val_accuracy: 0.3823 - val_loss: 2.1667
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 18ms/step - accuracy: 0.3958 - loss: 2.1091 - val_accuracy: 0.4248 - val_loss: 1.9953
+Epoch 1/10
+2025-03-04 06:22:36.577492: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step - accuracy: 0.4084 - loss: 2.03482025-03-04 06:23:06.713974: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 42s 25ms/step - accuracy: 0.4084 - loss: 2.0347 - val_accuracy: 0.3861 - val_loss: 2.1118
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4078 - loss: 2.0620 - val_accuracy: 0.3952 - val_loss: 2.1104
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4155 - loss: 2.0211 - val_accuracy: 0.4234 - val_loss: 1.9786
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4416 - loss: 1.9344 - val_accuracy: 0.4169 - val_loss: 1.9941
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4399 - loss: 1.9234 - val_accuracy: 0.4333 - val_loss: 1.9551
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4058 - loss: 2.0529 - val_accuracy: 0.4036 - val_loss: 2.0492
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4295 - loss: 1.9678 - val_accuracy: 0.4438 - val_loss: 1.9285
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4385 - loss: 1.9242 - val_accuracy: 0.4185 - val_loss: 1.9995
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4488 - loss: 1.8843 - val_accuracy: 0.4302 - val_loss: 1.9548
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4405 - loss: 1.9199 - val_accuracy: 0.4409 - val_loss: 1.9179
+Epoch 1/10
+2025-03-04 06:27:28.108136: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step - accuracy: 0.4442 - loss: 1.90882025-03-04 06:27:58.674867: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 43s 26ms/step - accuracy: 0.4442 - loss: 1.9087 - val_accuracy: 0.4398 - val_loss: 1.9178
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4521 - loss: 1.8752 - val_accuracy: 0.4496 - val_loss: 1.8950
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4570 - loss: 1.8518 - val_accuracy: 0.4409 - val_loss: 1.9083
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4656 - loss: 1.8318 - val_accuracy: 0.4595 - val_loss: 1.8483
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4595 - loss: 1.8494 - val_accuracy: 0.4337 - val_loss: 1.9308
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4358 - loss: 1.9132 - val_accuracy: 0.4497 - val_loss: 1.8807
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4592 - loss: 1.8270 - val_accuracy: 0.4304 - val_loss: 1.9445
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4647 - loss: 1.8533 - val_accuracy: 0.3677 - val_loss: 2.2181
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4170 - loss: 2.0317 - val_accuracy: 0.4347 - val_loss: 1.9505
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4458 - loss: 1.9058 - val_accuracy: 0.4014 - val_loss: 2.0463
+Epoch 1/10
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step - accuracy: 0.4389 - loss: 1.93182025-03-04 06:32:50.721133: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 42s 26ms/step - accuracy: 0.4389 - loss: 1.9318 - val_accuracy: 0.4401 - val_loss: 1.9186
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4408 - loss: 1.9173 - val_accuracy: 0.4485 - val_loss: 1.9042
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4499 - loss: 1.8853 - val_accuracy: 0.4433 - val_loss: 1.8851
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4455 - loss: 1.8990 - val_accuracy: 0.4648 - val_loss: 1.8262
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4487 - loss: 1.8822 - val_accuracy: 0.4229 - val_loss: 1.9642
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4535 - loss: 1.8525 - val_accuracy: 0.4536 - val_loss: 1.8451
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4649 - loss: 1.8204 - val_accuracy: 0.4354 - val_loss: 1.9302
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4428 - loss: 1.9056 - val_accuracy: 0.4290 - val_loss: 1.9376
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 30s 20ms/step - accuracy: 0.4565 - loss: 1.8667 - val_accuracy: 0.4202 - val_loss: 1.9756
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4497 - loss: 1.8767 - val_accuracy: 0.4605 - val_loss: 1.8303
+WARNING:absl:You are saving your model as an HDF5 file via model.save() or keras.saving.save_model(model). This file format is considered legacy. We recommend using instead the native Keras format, e.g. model.save('my_model.keras') or keras.saving.save_model(model, 'my_model.keras'). 
+(.venv) root@DESKTOP-0NK1C3M:/mnt/d/ntu_rgb_skeleton_data#
+
+============================================
+* Transposed Trasnformer
+
+(.venv) root@DESKTOP-0NK1C3M:/mnt/d/ntu_rgb_skeleton_data# /mnt/d/ntu_rgb_skeleton_data/.venv/bin/python /mnt/d/ntu_rgb_skeleton_data/transpose_model_alldata.py
+2025-03-04 18:46:52.227376: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1741081615.177914     838 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1741081615.992801     838 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-03-04 18:47:03.703415: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1741082288.325510     838 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 4699 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1060 6GB, pci bus id: 0000:06:00.0, compute capability: 6.1
+2025-03-04 18:58:15.808592: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 635925000 exceeds 10% of free system memory.
+2025-03-04 18:58:17.281973: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 635925000 exceeds 10% of free system memory.
+Epoch 1/10
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1741082320.135991    1930 service.cc:148] XLA service 0x7f5228002210 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1741082320.150422    1930 service.cc:156]   StreamExecutor device (0): NVIDIA GeForce GTX 1060 6GB, Compute Capability 6.1
+2025-03-04 18:58:43.156514: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1741082325.517462    1930 cuda_dnn.cc:529] Loaded cuDNN version 90600
+2025-03-04 18:58:50.194596: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+I0000 00:00:1741082330.252126    1930 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step - accuracy: 0.1026 - loss: 3.62212025-03-04 18:59:19.276868: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 22ms/step - accuracy: 0.1027 - loss: 3.62112025-03-04 18:59:19.596960: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 158985000 exceeds 10% of free system memory.
+2025-03-04 18:59:19.689858: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 158985000 exceeds 10% of free system memory.
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 65s 25ms/step - accuracy: 0.1027 - loss: 3.6208 - val_accuracy: 0.2306 - val_loss: 2.7711
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.2322 - loss: 2.8075 - val_accuracy: 0.2384 - val_loss: 2.7392
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 24s 18ms/step - accuracy: 0.2499 - loss: 2.6969 - val_accuracy: 0.2554 - val_loss: 2.7042
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 21ms/step - accuracy: 0.2597 - loss: 2.6639 - val_accuracy: 0.2878 - val_loss: 2.5561
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 21ms/step - accuracy: 0.2915 - loss: 2.5152 - val_accuracy: 0.2913 - val_loss: 2.5329
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 20ms/step - accuracy: 0.2950 - loss: 2.5075 - val_accuracy: 0.3178 - val_loss: 2.4132
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 24s 18ms/step - accuracy: 0.3125 - loss: 2.4263 - val_accuracy: 0.3560 - val_loss: 2.2546
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 20ms/step - accuracy: 0.3433 - loss: 2.3055 - val_accuracy: 0.3574 - val_loss: 2.2225
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 20ms/step - accuracy: 0.3348 - loss: 2.3297 - val_accuracy: 0.3645 - val_loss: 2.2176
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 20ms/step - accuracy: 0.3581 - loss: 2.2361 - val_accuracy: 0.3828 - val_loss: 2.1596
+2025-03-04 19:03:25.405903: W external/local_xla/xla/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 635925000 exceeds 10% of free system memory.
+Epoch 1/10
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step - accuracy: 0.3701 - loss: 2.18952025-03-04 19:04:02.638873: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 68 bytes spill stores, 68 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 40s 25ms/step - accuracy: 0.3701 - loss: 2.1895 - val_accuracy: 0.3851 - val_loss: 2.1504
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.3858 - loss: 2.1294 - val_accuracy: 0.3578 - val_loss: 2.2724
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.3992 - loss: 2.1037 - val_accuracy: 0.4011 - val_loss: 2.1023
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 26s 19ms/step - accuracy: 0.4065 - loss: 2.0706 - val_accuracy: 0.4097 - val_loss: 2.0691
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4195 - loss: 2.0309 - val_accuracy: 0.4217 - val_loss: 2.0084
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4326 - loss: 1.9532 - val_accuracy: 0.4290 - val_loss: 1.9891
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4367 - loss: 1.9465 - val_accuracy: 0.4371 - val_loss: 1.9613
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4423 - loss: 1.9281 - val_accuracy: 0.4377 - val_loss: 1.9399
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 21ms/step - accuracy: 0.4408 - loss: 1.9105 - val_accuracy: 0.4397 - val_loss: 1.9306
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 21ms/step - accuracy: 0.4464 - loss: 1.9171 - val_accuracy: 0.4587 - val_loss: 1.8867
+Epoch 1/10
+1323/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 19ms/step - accuracy: 0.4542 - loss: 1.87522025-03-04 19:08:52.825371: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 72 bytes spill stores, 72 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 41s 25ms/step - accuracy: 0.4543 - loss: 1.8752 - val_accuracy: 0.4656 - val_loss: 1.8454
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4637 - loss: 1.8531 - val_accuracy: 0.4648 - val_loss: 1.8281
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 27s 21ms/step - accuracy: 0.4690 - loss: 1.8275 - val_accuracy: 0.4764 - val_loss: 1.7810
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4781 - loss: 1.7670 - val_accuracy: 0.4195 - val_loss: 2.0075
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4768 - loss: 1.8019 - val_accuracy: 0.4647 - val_loss: 1.8110
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4843 - loss: 1.7625 - val_accuracy: 0.4773 - val_loss: 1.8005
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4877 - loss: 1.7533 - val_accuracy: 0.4662 - val_loss: 1.8223
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.4972 - loss: 1.7152 - val_accuracy: 0.4950 - val_loss: 1.7229
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.4996 - loss: 1.7026 - val_accuracy: 0.4844 - val_loss: 1.7390
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 29s 22ms/step - accuracy: 0.4976 - loss: 1.7057 - val_accuracy: 0.5017 - val_loss: 1.7080
+Epoch 1/10
+2025-03-04 19:13:12.453436: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step - accuracy: 0.4936 - loss: 1.70742025-03-04 19:13:42.734963: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function 'input_add_reduce_fusion_1', 68 bytes spill stores, 68 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 43s 26ms/step - accuracy: 0.4936 - loss: 1.7074 - val_accuracy: 0.4962 - val_loss: 1.6980
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5056 - loss: 1.6765 - val_accuracy: 0.4899 - val_loss: 1.7219
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5140 - loss: 1.6451 - val_accuracy: 0.5079 - val_loss: 1.6664
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5170 - loss: 1.6356 - val_accuracy: 0.4882 - val_loss: 1.7594
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5223 - loss: 1.6036 - val_accuracy: 0.5021 - val_loss: 1.7116
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 26s 19ms/step - accuracy: 0.5179 - loss: 1.6319 - val_accuracy: 0.4842 - val_loss: 1.7944
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5177 - loss: 1.6413 - val_accuracy: 0.5069 - val_loss: 1.7032
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5276 - loss: 1.5896 - val_accuracy: 0.5063 - val_loss: 1.6823
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5272 - loss: 1.5985 - val_accuracy: 0.5036 - val_loss: 1.6987
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5320 - loss: 1.5640 - val_accuracy: 0.5098 - val_loss: 1.6567
+Epoch 1/10
+2025-03-04 19:18:08.867340: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+1322/1325 ━━━━━━━━━━━━━━━━━━━━ 0s 20ms/step - accuracy: 0.5256 - loss: 1.59082025-03-04 19:18:39.010614: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:397] ptxas warning : Registers are spilled to local memory in function 'copy_fusion', 3696 bytes spill stores, 3932 bytes spill loads
+ptxas warning : Registers are spilled to local memory in function '__cuda_sm3x_div_rn_noftz_f32_slowpath', 16 bytes spill stores, 16 bytes spill loads
+
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 43s 26ms/step - accuracy: 0.5256 - loss: 1.5908 - val_accuracy: 0.5304 - val_loss: 1.5789
+Epoch 2/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5429 - loss: 1.5418 - val_accuracy: 0.5422 - val_loss: 1.5364
+Epoch 3/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.5437 - loss: 1.5369 - val_accuracy: 0.5319 - val_loss: 1.5799
+Epoch 4/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5327 - loss: 1.5741 - val_accuracy: 0.5187 - val_loss: 1.6220
+Epoch 5/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5387 - loss: 1.5408 - val_accuracy: 0.5222 - val_loss: 1.5938
+Epoch 6/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5492 - loss: 1.5180 - val_accuracy: 0.5360 - val_loss: 1.5544
+Epoch 7/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 25s 19ms/step - accuracy: 0.5504 - loss: 1.5037 - val_accuracy: 0.5413 - val_loss: 1.5304
+Epoch 8/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5508 - loss: 1.4971 - val_accuracy: 0.5294 - val_loss: 1.5993
+Epoch 9/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5579 - loss: 1.4757 - val_accuracy: 0.5214 - val_loss: 1.6024
+Epoch 10/10
+1325/1325 ━━━━━━━━━━━━━━━━━━━━ 28s 21ms/step - accuracy: 0.5510 - loss: 1.5007 - val_accuracy: 0.5407 - val_loss: 1.5520
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+(.venv) root@DESKTOP-0NK1C3M:/mnt/d/ntu_rgb_skeleton_data# 
