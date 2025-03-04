@@ -1,8 +1,8 @@
-Explanaion of directory
-
-author : HD, Choi
-
+Explanaion of directory  
+author : HD, Choi  
 Date : 2025-03-04
+
+---------
 
 NTU_RGBD_samples_with_missing_skeletons.txt = using for check missing skeleton files.
 
